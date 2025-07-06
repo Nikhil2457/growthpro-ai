@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #fbc2eb 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 16px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #22223b;
+  animation: fadeIn 1s;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+  animation: slideUp 0.7s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form label {
+  font-weight: 500;
+  color: #4a4e69;
+}
+
+.form input {
+  padding: 8px 12px;
+  border: 1px solid #c9c9c9;
+  border-radius: 6px;
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.form button {
+  background: linear-gradient(90deg, #5f72bd 0%, #9b23ea 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form button:hover:enabled {
+  background: linear-gradient(90deg, #9b23ea 0%, #5f72bd 100%);
+  transform: scale(1.03);
+}
+
+.error {
+  color: #fff;
+  background: #e63946;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5f72bd;
+  animation: bounce 1s;
+}
+
+.stat-label {
+  color: #4a4e69;
+  font-size: 1rem;
+}
+
+.headline {
+  background: #f7f7fa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  font-style: italic;
+  color: #22223b;
+  animation: fadeIn 1.2s;
+}
+
+.animate {
+  animation: fadeIn 1.2s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 4px;
+  }
+  .card {
+    padding: 12px;
+  }
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+.regenerate-btn {
+  background: linear-gradient(90deg, #5f72bd 0%, #9b23ea 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 12px;
+  width: 100%;
+}
+.regenerate-btn:hover:enabled {
+  background: linear-gradient(90deg, #9b23ea 0%, #5f72bd 100%);
+  transform: scale(1.03);
+}
+.regenerate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
